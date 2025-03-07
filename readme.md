@@ -13,6 +13,7 @@
 3. **Clonar projeto**
    ```sh
    git clone https://github.com/commithouse/apiQuestionRedis
+   cd apiQuestionRedis
    ```
 ## Endpoints
 
