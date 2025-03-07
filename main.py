@@ -8,7 +8,7 @@ class Question(BaseModel):
     question_text: str
     question_id: int
 
-IP_CONTAINER = "20.206.150.156"
+IP_CONTAINER = "localhost"
 
 def get_redis_connection():
     try:
