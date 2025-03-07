@@ -1,3 +1,6 @@
+# Projeto API python 
+
+Projeto feito com a lib fastAPI para consultar dados de questões armazenados no banco de dados in memory redis.
 
 ## Setup
 
