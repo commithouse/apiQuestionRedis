@@ -10,7 +10,10 @@
     ```sh
     uvicorn main:app --reload --log-level info
     ```
-
+3. **Clonar projeto**
+   ```sh
+   git clone https://github.com/commithouse/apiQuestionRedis
+   ```
 ## Endpoints
 
 - **GET /**: Returns a welcome message.
