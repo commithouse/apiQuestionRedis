@@ -33,6 +33,11 @@ uvicorn main:app --reload
 
 ```
 
+## Para executar
+
+**Pode utilizar a propria pagina do swagger e clicar em try it out e colocar os dados de parametros e body na pagina mesmo!**
+
+
 ## Postman collection
 
 Postman collection on root folder ./redis.postman_collection.json
