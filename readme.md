@@ -29,10 +29,10 @@ To test the application, run the following command and navigate to `http://127.0
 
 to see doc swagger:  `http://127.0.0.1:8000/docs`
 
-```sh
-uvicorn main:app --reload
+    ```sh
+    uvicorn main:app --reload
 
-```
+    ```
 
 ## Para executar
 
@@ -42,3 +42,12 @@ uvicorn main:app --reload
 ## Postman collection
 
 Postman collection on root folder ./redis.postman_collection.json
+
+
+## Como destruir o container Redis
+
+Para remover o container Redis criado, execute o comando abaixo no terminal:
+
+    ```sh
+    docker rm -f meu-redis
+    ```
