@@ -4,20 +4,21 @@ Projeto feito com a lib fastAPI para consultar dados de questões armazenados no
 
 ## Setup
 
-1. **Install dependencies**:
+1. **Criar container redis**:
+    ```sh
+        docker run -d --name meu-redis -p 6379:6379 redis
+    ```
+
+2. **Install dependencies**:
     ```sh
     pip install fastapi uvicorn redis
     ```
 
-2. **Run the application**:
+3. **Run the application**:
     ```sh
     uvicorn main:app --reload --log-level info
     ```
-3. **Clonar projeto**
-   ```sh
-   git clone https://github.com/commithouse/apiQuestionRedis
-   cd apiQuestionRedis
-   ```
+
 ## Endpoints
 
 - **GET /**: Returns a welcome message.
