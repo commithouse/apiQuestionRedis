@@ -1,53 +1,50 @@
-# Projeto API python 
+# Projeto API Python 
 
-Projeto feito com a lib fastAPI para consultar dados de questões armazenados no banco de dados in memory redis.
+Projeto feito com a biblioteca FastAPI para consultar dados de questões armazenados no banco de dados em memória Redis.
 
-## Setup
+## Configuração
 
-1. **Criar container redis**:
-    ```sh
-        docker run -d --name meu-redis -p 6379:6379 redis
-    ```
+1. **Criar container Redis**:
+```sh
+docker run -d --name meu-redis -p 6379:6379 redis
+```
 
-2. **Install dependencies**:
-    ```sh
-    pip install fastapi uvicorn redis
-    ```
+2. **Instalar dependências**:
+```sh
+pip install fastapi uvicorn redis
+```
 
-3. **Run the application**:
-    ```sh
-    uvicorn main:app --reload --log-level info
-    ```
+3. **Executar a aplicação**:
+```sh
+uvicorn main:app --reload --log-level info
+```
 
 ## Endpoints
 
-- **GET /**: Returns a welcome message.
+- **GET /**: Retorna uma mensagem de boas-vindas.
 
-## Example
+## Exemplo
 
-To test the application, run the following command and navigate to `http://127.0.0.1:8000` in your browser:
+Para testar a aplicação, execute o comando abaixo e acesse `http://127.0.0.1:8000` no seu navegador:
 
-to see doc swagger:  `http://127.0.0.1:8000/docs`
+Para ver a documentação Swagger:  `http://127.0.0.1:8000/docs`
 
-    ```sh
-    uvicorn main:app --reload
+```sh
+uvicorn main:app --reload
+```
 
-    ```
+## Como executar
 
-## Para executar
+**Você pode utilizar a própria página do Swagger, clicar em "try it out" e inserir os dados dos parâmetros e body na própria página!**
 
-**Pode utilizar a propria pagina do swagger e clicar em try it out e colocar os dados de parametros e body na pagina mesmo!**
+## Coleção Postman
 
-
-## Postman collection
-
-Postman collection on root folder ./redis.postman_collection.json
-
+A coleção do Postman está na raiz do projeto: ./redis.postman_collection.json
 
 ## Como destruir o container Redis
 
 Para remover o container Redis criado, execute o comando abaixo no terminal:
 
-    ```sh
-    docker rm -f meu-redis
-    ```
+```sh
+docker rm -f meu-redis
+```
