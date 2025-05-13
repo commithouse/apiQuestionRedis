@@ -29,6 +29,8 @@ Para testar a aplicação, execute o comando abaixo e acesse `http://127.0.0.1:8
 
 Para ver a documentação Swagger:  `http://127.0.0.1:8000/docs`
 
+![alt text](image.png)
+
 ```sh
 uvicorn main:app --reload
 ```
