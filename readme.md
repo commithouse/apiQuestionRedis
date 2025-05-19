@@ -27,10 +27,6 @@ Para ver a documentação Swagger:  `http://127.0.0.1:8000/docs`
 
 ![alt text](https://github.com/commithouse/apiQuestionRedis/blob/main/images/image.png?raw=true)
 
-```sh
-uvicorn main:app --reload
-```
-
 ## Como executar
 
 Você pode utilizar a própria página do Swagger `http://127.0.0.1:8000/docs`, clicar em "try it out" e inserir os dados dos parâmetros e body na própria página!
@@ -42,7 +38,7 @@ Carregue os dados de questões e de respostas utilizando os metodos Posts listad
 - **POST /questions**: cria lista de questões
 - **POST /answers**: cria lista de respostas
 
-## Como destruir 
+## Como limpar o ambiente 
 
 Para remover as questoes e respostas no redis use as rotas via pagina swagger `http://127.0.0.1:8000/docs`:
 
