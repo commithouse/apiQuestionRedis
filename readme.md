@@ -37,13 +37,21 @@ uvicorn main:app --reload
 
 ## Como executar
 
-**Você pode utilizar a própria página do Swagger, clicar em "try it out" e inserir os dados dos parâmetros e body na própria página!**
+Você pode utilizar a própria página do Swagger `http://127.0.0.1:8000/docs`, clicar em "try it out" e inserir os dados dos parâmetros e body na própria página!
 
-## Coleção Postman
+## Carga de dados fake
 
-A coleção do Postman está na raiz do projeto: ./redis.postman_collection.json
+Carregue os dados de questões e de respostas utilizando os metodos Posts listados abaixo e coloque no body o conteudo dos arquivos json que estao na pasta carga-dados-fake deste repo.
 
-## Como destruir o container Redis
+- **POST /questions**: cria lista de questões
+- **POST /answers**: cria lista de respostas
+
+## Como destruir 
+
+Para remover as questoes e respostas no redis use as rotas via pagina swagger `http://127.0.0.1:8000/docs`:
+
+- **DELETE /questions**: delleta todas as questões
+- **DELETE /answers**: delleta todas as respostas
 
 Para remover o container Redis criado, execute o comando abaixo no terminal:
 
