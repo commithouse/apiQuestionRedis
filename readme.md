@@ -19,10 +19,6 @@ pip install fastapi uvicorn redis
 uvicorn main:app --reload --log-level info
 ```
 
-## Endpoints
-
-- **GET /**: Retorna uma mensagem de boas-vindas.
-
 ## Exemplo
 
 Para testar a aplicação, execute o comando abaixo e acesse `http://127.0.0.1:8000` no seu navegador:
