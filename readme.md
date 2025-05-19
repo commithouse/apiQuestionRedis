@@ -30,7 +30,7 @@ Para testar a aplicação, execute o comando abaixo e acesse `http://127.0.0.1:8
 Para ver a documentação Swagger:  `http://127.0.0.1:8000/docs`
 
 Documetação:
-![alt text](images/image.png)
+![alt text](https://github.com/commithouse/apiQuestionRedis/blob/main/images/image.png?raw=true)
 
 ```sh
 uvicorn main:app --reload
