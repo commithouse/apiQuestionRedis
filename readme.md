@@ -1,52 +1,73 @@
-# Projeto API Python 
+# 🚀 Projeto API Quiz (Python + Redis)
 
-Projeto feito com a biblioteca FastAPI para consultar dados de questões armazenados no banco de dados em memória Redis.
+API desenvolvida com **FastAPI** para gerenciar questões e respostas de quiz, utilizando o banco de dados em memória **Redis**.
 
-## Configuração
+---
 
-1. **Criar container Redis**:
-```sh
-docker run -d --name meu-redis -p 6379:6379 redis
-```
+## ⚙️ Configuração
 
-2. **Instalar dependências**:
-```sh
-pip install fastapi uvicorn redis
-```
+1. **Suba um container Redis**  
+   ```sh
+   docker run -d --name meu-redis -p 6379:6379 redis
+   ```
 
-3. **Executar a aplicação**:
-```sh
-uvicorn main:app --reload --log-level info
-```
+2. **Instale as dependências**  
+   ```sh
+   pip install fastapi uvicorn redis
+   ```
 
-## Exemplo
+3. **Execute a aplicação**  
+   ```sh
+   uvicorn main:app --reload --log-level info
+   ```
 
-Para testar a aplicação, execute o comando abaixo e acesse `http://127.0.0.1:8000` no seu navegador:
+---
 
-Para ver a documentação Swagger:  `http://127.0.0.1:8000/docs`
+## 🧪 Testando a API
 
-![alt text](https://github.com/commithouse/apiQuestionRedis/blob/main/images/image.png?raw=true)
+Acesse no navegador: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-## Como executar
+- Para acessar a documentação interativa (Swagger):  
+  [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-Você pode utilizar a própria página do Swagger `http://127.0.0.1:8000/docs`, clicar em "try it out" e inserir os dados dos parâmetros e body na própria página!
+![Swagger UI](https://github.com/commithouse/apiQuestionRedis/blob/main/images/image.png?raw=true)
 
-## Carga de dados fake
+---
 
-Carregue os dados de questões e de respostas utilizando os metodos Posts listados abaixo e coloque no body o conteudo dos arquivos json que estao na pasta carga-dados-fake deste repo.
+## 🖱️ Como usar
 
-- **POST /questions**: cria lista de questões
-- **POST /answers**: cria lista de respostas
+Você pode utilizar a própria página do Swagger (`/docs`), clicar em **"Try it out"** e inserir os dados dos parâmetros e body diretamente na interface.
 
-## Como limpar o ambiente 
+---
 
-Para remover as questoes e respostas no redis use as rotas via pagina swagger `http://127.0.0.1:8000/docs`:
+## 📝 Carga de Dados Fake
 
-- **DELETE /questions**: delleta todas as questões
-- **DELETE /answers**: delleta todas as respostas
+Para popular o banco com dados de exemplo, utilize os métodos abaixo e envie no body o conteúdo dos arquivos `.json` da pasta `carga-dados-fake` deste repositório:
 
-Para remover o container Redis criado, execute o comando abaixo no terminal:
+- **POST `/questions`**: cria uma lista de questões
+- **POST `/answers`**: cria uma lista de respostas
+
+---
+
+## 🧹 Limpeza do Ambiente
+
+Para remover todos os dados do Redis, utilize as rotas via Swagger:
+
+- **DELETE `/questions`**: remove todas as questões
+- **DELETE `/answers`**: remove todas as respostas
+
+Para remover o container Redis criado, execute:
 
 ```sh
 docker rm -f meu-redis
 ```
+
+---
+
+## 📚 Referências
+
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Redis Documentation](https://redis.io/documentation/)
+- [Uvicorn Documentation](https://www.uvicorn.org/)
+
+---
